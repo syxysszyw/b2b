@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh_CN"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="zh_CN"><![endif]-->
+<html lang="zh_CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>代理商信息详情</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/distributor-manage.css">
+		<!--[if lt IE 9]>
+			<script src="//quimg.com/b2b/js/plugin/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//quimg.com/b2b/js/plugin/json2.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="b2b_header">
+			<div class="clearfix">
+				<h1 class="b2b_header_title">我趣B2B管理系统</h1>
+				<nav class="b2b_header_nav">
+					<a href="">结算报表</a>
+					<a href="">安全退出</a>
+				</nav>
+			</div>
+		</header>
+		<div class="b2b_main clearfix">
+			<nav class="b2b_side_bar clearfix">
+				<h2>分销商管理</h2>
+				<ul>
+					<li><a href="add-distributor-info.html">新增分销商</a></li>
+					<li><a href="query-distributor-list.html">查询分销商</a></li>
+				</ul>
+				<h2>财务报表</h2>
+				<ul>
+					<li><a href="">佣金结算报表</a></li>
+				</ul>
+				<h2>用户管理</h2>
+				<ul>
+					<li><a href="">添加新用户</a></li>
+					<li><a href="">查询用户</a></li>
+				</ul>
+			</nav>
+			<div class="b2b_right_content clearfix">
+				<form action="" id="distributorInfo" class="form-inline">
+					<div class="distributor_Info">
+						<h3>分销商主体信息</h3>
+						<div class="row">
+							<label for="distributorLogName" >登录名：</label><span id="distributorLogName">linngo</span>
+							<label for="wholeName">名称：</label><span id="wholeName"></span>
+						</div>
+						<div class="row">
+							<label for="subject">主体类型：</label><span id="subject"></span>
+							<label for="settlementPeriod">结算周期：</label><span id="settlementPeriod"></span>
+							<label for="currency" >结算币种：</label><span id="currency">人民币</span>				
+						</div>
+						<div class="row">
+							<label for="wechat" >微信公众号：</label><span id="wechat"></span>
+							<label for="wechatKey" >微信key：</label><span id="wechatKey"></span>
+							<label for="authorization" >授权情况：</label><span id="authorization"></span>
+						</div>
+						<div class="row">
+							<label for="CertificateType">证件类型：</label><span id="CertificateType"></span>
+							<label for="CertificateNum" >证件号码：</label><span id="CertificateNum"></span>
+							<label for="attachment" >证件附件：</label><span id="attachment"></span>
+						</div>
+						<div class="row">
+							<label for="bookingSwitch">预订开关：</label><span id="bookingSwitch"></span>
+							<label for="depositBank" >开户银行：</label><span id="depositBank"></span>
+							<label for="bankAccount" >银行帐号：</label><span id="bankAccount"></span>		
+						</div>
+						<div class="row">
+							<label for="ClientNum" >客户编码：</label><span id="ClientNum"></span>
+							<label for="status" >状态：</label><span id="status"></span>				
+						</div>
+					</div>   <!-- /.distributor_Info -->
+
+					<div class="distributor_contact">						
+						<h3>联系人信息</h3>
+						<div class="row">
+							<label for="contacts">联系人：</label><span id="contacts"></span>
+							<label for="tel" >电话：</label><span id="tel"></span>
+							<label for="mobile">手机：</label><span id="mobile"></span>
+						</div>
+
+						<div class="row">
+							<label for="email" >Email：</label><span id="email"></span>
+							<label for="max" >传真：</label><span id="max"></span>
+							<label for="country">国家：</label><span id="country"></span>			
+						</div>
+
+						<div class="row">
+							<label for="address" >地址：</label><span id="address"></span>
+						</div>
+					</div>   <!-- /.distributor_contact -->
+
+					<div class="woqu_customer_manager">
+						<h3>我趣客户经理</h3>
+						<div class="row">
+							<label for="manager">客户经理：</label><span id="manager"></span>
+							<label for="managerPhone">手机：</label><span id="managerPhone"></span>
+							<label for="managerEmail" >Email：</label><span id="managerEmail"></span>
+						</div>
+					</div>   <!-- /.woqu_customer_manager -->
+
+					<div class="otherNotes">
+						<h3>其它说明</h3><span id="otherNotes"></span>
+					</div>
+
+					<div class="submitBtnGroup">
+						<button type="submit" class="btn btn-success" id="submit">提交</button>
+						<button type="button" class="btn btn-danger" id="saveAsDraft">保存为草稿</button>
+					</div>
+				</form>
+			</div><!-- /.b2b_right_content -->
+		</div>  <!--  /.b2b_main -->
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/distributor.js"></script>
+		<script src="js/addressSelect.js"></script>
+		<script src="js/TestAddress1.js"></script>
+		<script src="js/TestChooseAddress.js"></script>
+	</body>
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh_CN"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="zh_CN"><![endif]-->
+<html lang="zh_CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>查询代理商查询列表</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/distributor-manage.css">
+		<!--[if lt IE 9]>
+			<script src="//quimg.com/b2b/js/plugin/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//quimg.com/b2b/js/plugin/json2.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="b2b_header">
+			<div class="clearfix">
+				<h1 class="b2b_header_title">我趣B2B管理系统</h1>
+				<nav class="b2b_header_nav">
+					<a href="">结算报表</a>
+					<a href="">安全退出</a>
+				</nav>
+			</div>
+		</header>
+		<div class="b2b_main clearfix">
+			<nav class="b2b_side_bar clearfix">
+				<h2>分销商管理</h2>
+				<ul>
+					<li><a href="add-distributor-info.html">新增分销商</a></li>
+					<li><a href="query-distributor-list.html">查询分销商</a></li>
+				</ul>
+				<h2>财务报表</h2>
+				<ul>
+					<li><a href="">佣金结算报表</a></li>
+				</ul>
+				<h2>用户管理</h2>
+				<ul>
+					<li><a href="add-distributor-info.html">添加新用户</a></li>
+					<li><a href="query-distributor-list.html">查询用户</a></li>
+				</ul>
+			</nav>
+			<div class="b2b_right_content clearfix">
+				<div class="b2b_right_top_search">
+					<form action="" class="form-inline">
+						<label for="distributorLogName" class="search_col_odd">
+						登录名：
+						</label>
+						<input type="text" id="distributorLogName" class="search_col_even form-control">							
+						<label for="wholeName" class="search_col_odd">
+							代理名称：
+						</label>							
+						<input type="text" id="wholeName" class="form-control search_col_even">
+						<label for="status" class="search_col_odd">
+							状态：
+						</label>	
+						<select name="" id="status" class="search_col_even form-control">
+							<option value="">有效</option>
+							<option value="">冻结</option>
+							<option value="">草稿</option>
+							<option value="">无效</option>
+						</select>
+						<button type="button" class="btn btn-primary" id="searchBtn">搜索</button>
+					</form>
+				</div> <!--/.b2b_right_top_search -->
+				<div class="b2b_right_bottom_table">
+					<table class="table table-bordered">
+		                <thead>
+		                  <tr class="table_header">
+		                    <th>登录名</th>
+		                    <th>代理名称</th>
+		                    <th>状态</th>
+		                    <th>联系人</th>
+		                    <th>电话</th>
+		                    <th>联系手机</th>
+		                    <th>操作</th>
+		                  </tr>
+		                </thead>
+		                <tbody>
+		                	<!-- 一页显示10行 -->
+		                  <tr>
+		                    <td>linngo</td>
+		                    <td><a href="detail-distributor-info.html">深圳市中国国际旅行社有限公司高新园营业部</a></td>
+		                    <td class="tr_status">有效</td>
+		                    <td>梁靖敏</td>
+		                    <td>0755-36783620</td>
+		                    <td>1537789066565</td>
+		                    <td>
+		                    	<a href="modify-distributor-info.html">
+		                    		<button type="button" class="btn btn-warning btn-xs" id="modify">  修改
+		                    		</button>
+		                    	</a>
+		                    	<button type="button" class="btn btn-danger btn-xs freeze" data-toggle="modal" data-target="#freezeModal">冻结</button>
+		                    </td>
+		                  </tr>      
+		                  <tr>
+		                    <td>linngo</td>
+		                    <td><a href="detail-distributor-info.html">深圳市中国国际旅行社有限公司高新园营业部</a></td>
+		                    <td class="tr_status">有效</td>
+		                    <td>梁靖敏</td>
+		                    <td>0755-36783620</td>
+		                    <td>1537789066565</td>
+		                    <td>
+		                    	<a href="modify-distributor-info.html">
+		                    		<button type="button" class="btn btn-warning btn-xs" id="modify">  修改</button>
+		                    	</a>
+				                <button type="button" class="btn btn-danger btn-xs freeze" data-toggle="modal" data-target="#freezeModal">  冻结</button>
+		                    </td>
+		                  </tr>        
+		                </tbody>
+		              </table>    
+		              <ul class="pagination pull-right">
+			            <li><a href="#">«</a></li>
+			            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			            <li><a href="#">2</a></li>
+			            <li><a href="#">3</a></li>
+			            <li><a href="#">4</a></li>
+			            <li><a href="#">5</a></li>
+			            <li><a href="#">»</a></li>              
+		              </ul>          
+				</div>    <!-- /.b2b_right_bottom_table -->
+			</div> <!--/.b2b_right_content -->
+		</div><!--  /.b2b_main -->
+
+		<!-- 冻结分销商时弹出的确认框 -->
+		<div class="modal fade" id="freezeModal" tabindex="-1" role="dialog" aria-labelledby="freezeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      <div class="alert_content">
+		        确认要冻结该分销商吗?
+		      </div>	
+		      <div class="modal_footer">
+		        <button type="button" class="btn btn-success freeze_confirm" data-dismiss="modal">确认</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>   <!--/.freezeModal -->
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/distributor.js"></script>
+
+	</body>
+</html>

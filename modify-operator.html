@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh_CN"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="zh_CN"><![endif]-->
+<html lang="zh_CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>修改操作员</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/distributor-manage.css">
+		<!--[if lt IE 9]>
+			<script src="//quimg.com/b2b/js/plugin/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//quimg.com/b2b/js/plugin/json2.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="b2b_header">
+			<div class="clearfix">
+				<h1 class="b2b_header_title">我趣B2B管理系统</h1>
+				<nav class="b2b_header_nav">
+					<a href="">结算报表</a>
+					<a href="">安全退出</a>
+				</nav>
+			</div>
+		</header>
+		<div class="b2b_main clearfix">
+			<nav class="b2b_side_bar clearfix">
+				<h2>当地参团</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>自驾租车</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>个性玩法</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>接送服务</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>海外酒店</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>操作员管理</h2>
+				<ul>
+					<li><a href="add-operator.html">添加操作员</a></li>
+					<li><a href="query-operator.html">查询操作员</a></li>
+				</ul>
+			</nav>
+			<div class="b2b_right_content clearfix">
+				<form action="" id="operatorInfo" class="form-inline">
+					<div class="operator_Info">
+						<h3>修改操作员</h3>
+						<div class="row">
+							<label for="operatorLogName">登录名：</label><span id="operatorLogName">zhangsan</span>
+							<label for="userName">用户姓名：</label>
+							<input type="text" id="userName" class="form-control">
+							<label for="status">状态：</label>
+							<select name="" id="status" class="form-control">
+								<option value="">有效</option>
+								<option value="">冻结</option>
+								<option value="">草稿</option>
+								<option value="">无效</option>
+							</select>	
+						</div>
+						<div class="row">
+							<label for="mobile">手机：</label><input type="text" id="mobile" class="form-control">
+							<label for="operatorEmail">Email：</label><input type="text" id="operatorEmail" class="form-control">
+						</div>
+						<div class="row">
+							<label for="remarks">备注：</label>
+							<textarea name="" id="remarks" cols="30" rows="10">这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注这里是备注</textarea>
+						</div>
+					</div>   <!-- /.operator_Info -->
+					<div class="submitBtnGroup">
+						<a href="">
+							<button type="submit" class="btn btn-success" id="submit">  提交
+	               			</button>
+	               		</a>
+					</div>
+				</form>
+			</div><!-- /.b2b_right_content -->
+		</div>  <!--  /.b2b_main -->
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh_CN"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="zh_CN"><![endif]-->
+<html lang="zh_CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>添加代理商信息</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/distributor-manage.css">
+		<!--[if lt IE 9]>
+			<script src="//quimg.com/b2b/js/plugin/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//quimg.com/b2b/js/plugin/json2.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="b2b_header">
+			<div class="clearfix">
+				<h1 class="b2b_header_title">我趣B2B管理系统</h1>
+				<nav class="b2b_header_nav">
+					<a href="">结算报表</a>
+					<a href="">安全退出</a>
+				</nav>
+			</div>
+		</header>
+		<div class="b2b_main clearfix">
+			<nav class="b2b_side_bar clearfix">
+				<h2>分销商管理</h2>
+				<ul>
+					<li><a href="add-distributor-info.html">新增分销商</a></li>
+					<li><a href="query-distributor-list.html">查询分销商</a></li>
+				</ul>
+				<h2>财务报表</h2>
+				<ul>
+					<li><a href="">佣金结算报表</a></li>
+				</ul>
+				<h2>用户管理</h2>
+				<ul>
+					<li><a href="">添加新用户</a></li>
+					<li><a href="">查询用户</a></li>
+				</ul>
+			</nav>
+			<div class="b2b_right_content clearfix">
+				<form action="" id="distributorInfo" class="form-inline">
+					<div class="distributor_Info">
+						<h3>分销商主体信息</h3>
+						<div class="row">
+							<label for="distributorLogName" class="requiredStar">登录名：</label><input type="text" class="form-control" id="distributorLogName" required="required">
+							<label for="wholeName" class="requiredStar">名称：</label><input type="text" class="form-control" id="wholeName"  required="required">
+						</div>
+						<div class="row">
+							<label for="subject" class="requiredStar">主体类型：</label>
+							<div class="radioGroup" id="subject">
+								<input type="radio" id="individual" name="subject"  required="required" >个体
+								<input type="radio" id="enterprise" name="subject" checked  required="required" >企业
+							</div>							
+							<label for="settlementPeriod" class="requiredStar">结算周期：</label>
+							<select name="" id="settlementPeriod" class="form-control">
+								<option value="">单结</option>
+								<option value="">周结</option>
+								<option value="">双周结</option>
+								<option value="">月结</option>
+							</select>
+							<label for="currency" >结算币种：</label><span id="currency">人民币</span>				
+						</div>
+						<div class="row">
+							<label for="wechat" >微信公众号：</label><input type="text" id="wechat" class="form-control">
+							<label for="wechatKey" >微信key：</label><input type="text" id="wechatKey" class="form-control">
+							<label for="authorization" >授权情况：</label>
+							<div class="radioGroup" id="authorization">
+								<input type="radio" id="authorizationTrue" name="authorization">已授权
+								<input type="radio" id="authorizationFalse" name="authorization" checked>未授权
+							</div>
+							
+						</div>
+						<div class="row">
+							<label for="CertificateType" class="requiredStar">证件类型：</label>
+							<select name="" id="CertificateType" class="form-control">
+								<option value="">身份证</option>
+								<option value="">营业执照</option>
+							</select>
+							<label for="CertificateNum"  class="requiredStar">证件号码：</label><input type="text" id="CertificateNum" value="460002199909091212" required="required"  class="form-control">
+							<label for="attachment" >证件附件：</label><span id="attachment"></span>
+						</div>
+						<div class="row">
+							<label for="bookingSwitch">预订开关：</label>
+							<div  id="bookingSwitch" class="radioGroup">
+								<input type="radio" id="bookingOpen" name="bookingSwitch">开
+								<input type="radio" id="bookingClose" name="bookingSwitch" checked>关
+							</div>
+							<label for="depositBank" >开户银行：</label><input type="text" id="depositBank" value="工商银行广东省深圳市分行高新园支行" class="form-control">
+							<label for="bankAccount" >银行帐号：</label><input type="text" id="bankAccount" value="3333 8888 9999 0000 098" class="form-control">			
+						</div>
+						<div class="row">
+							<label for="ClientNum" >客户编码：</label><input type="text" class=" form-control" id="ClientNum">
+							<label for="status" >状态：</label>
+							<select name="" id="status" class="form-control">
+								<option value="">有效</option>
+								<option value="">冻结</option>
+								<option value="">草稿</option>
+								<option value="">无效</option>
+							</select>					
+						</div>
+					</div>   <!-- /.distributor_Info -->
+
+					<div class="distributor_contact">						
+						<h3>联系人信息</h3>
+						<div class="row">
+							<label for="contacts" class="requiredStar">联系人：</label><input type="text" id="contacts" required="required"  class="form-control">
+							<label for="tel" >电话：</label><input type="text" id="tel" class="form-control">
+							<label for="mobile" class="requiredStar">手机：</label><input type="text" id="mobile" required="required"  class="form-control">
+						</div>
+
+						<div class="row">
+							<label for="email" >Email：</label><input type="text" id="email" class="form-control">
+							<label for="max" >传真：</label><input type="text" id="max" class="form-control">
+							<label for="country" class="requiredStar">国家：</label>
+							<select name="" id="country" class="form-control">
+								<option value="">美国</option>
+								<option value="">美国</option>
+								<option value="">美国</option>
+								<option value="">美国</option>
+							</select>					
+						</div>
+
+						<div class="row">
+							<label for="address" >地址：</label>
+							<div id="address">
+								<select id="id_provSelect" name="provSelect" class=" form-control" onChange="loadCity(this.value);">
+									<option value="">请选择省份</option>
+								</select>
+								<select id="id_citySelect" name="citySelect" class="form-control">
+									<option value="">请选择城市</option>
+								</select>
+								<input type="text" class="form-control">
+							</div>
+						</div>
+					</div>   <!-- /.distributor_contact -->
+
+					<div class="woqu_customer_manager">
+						<h3>我趣客户经理</h3>
+						<div class="row">
+							<label for="manager" class="requiredStar">客户经理：</label><input type="text" id="manager" required="required" class="form-control">
+							<label for="manegerPhone" class="requiredStar">手机：</label><input type="text" id="manegerPhone"  required="required" class="form-control">
+							<label for="manegerEmail" >Email：</label><input type="text" id="manegerEmail" class="form-control">
+						</div>
+					</div>   <!-- /.woqu_customer_manager -->
+
+					<div class="otherNotes">
+						<h3>其它说明</h3>
+						<textarea name="" id="otherNotes" cols="30" rows="10">此代理人是挂靠的旅行社，当个人小B对待。一单一结。微信订单的流向问题，以后需要探索，暂时流入平台库。如果预订开关不开，可能还需要一个独立的预订电话。</textarea>
+					</div>
+
+					<div class="submitBtnGroup">
+						<button type="button" class="btn btn-success" id="submitBtn">提交</button>
+						<button type="button" class="btn btn-danger" id="saveAsDraft">保存为草稿</button>
+					</div>
+				</form>
+			</div><!-- /.b2b_right_content -->
+		</div>  <!--  /.b2b_main -->
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/distributor.js"></script>
+		<script src="js/addressSelect.js"></script>
+		<script src="js/Address.js"></script>
+		<script src="js/ChooseAddress.js"></script>
+	</body>
+</html>

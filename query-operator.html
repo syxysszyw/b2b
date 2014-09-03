@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7" lang="zh_CN"><![endif]-->
+<!--[if IE 8]><html class="ie8" lang="zh_CN"><![endif]-->
+<html lang="zh_CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>查询操作员</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/distributor-manage.css">
+		<!--[if lt IE 9]>
+			<script src="//quimg.com/b2b/js/plugin/html5shiv.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="//quimg.com/b2b/js/plugin/json2.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header class="b2b_header">
+			<div class="clearfix">
+				<h1 class="b2b_header_title">我趣B2B管理系统</h1>
+				<nav class="b2b_header_nav">
+					<a href="">结算报表</a>
+					<a href="">帮助中心</a>
+					<a href="">帐户信息</a>
+					<a href="">安全退出</a>
+				</nav>
+			</div>
+		</header>
+		<div class="b2b_main clearfix">
+			<nav class="b2b_side_bar clearfix">
+				<h2>当地参团</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>自驾租车</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>个性玩法</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>接送服务</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>海外酒店</h2>
+				<ul>
+					<li><a href="">产品查询</a></li>
+					<li><a href="">待确认订单</a></li>
+					<li><a href="">已确认订单</a></li>
+					<li><a href="">已取消订单</a></li>
+				</ul>
+				<h2>操作员管理</h2>
+				<ul>
+					<li><a href="add-operator.html">添加操作员</a></li>
+					<li><a href="query-operator.html">查询操作员</a></li>
+				</ul>
+			</nav>
+			<div class="b2b_right_content clearfix">
+				<h3>查询操作员</h3>
+				<table class="table table-bordered">
+		                <thead>
+		                  <tr class="table_header">
+		                    <th>登录名</th>
+		                    <th>操作员名称</th>
+		                    <th>电子邮件</th>
+		                    <th>手机号码</th>
+		                    <th>状态</th>
+		                    <th>操作</th>
+		                  </tr>
+		                </thead>
+		                <tbody>
+		                	<!-- 一页显示10行 -->
+		                  <tr>
+		                    <td>linngo</td>
+		                    <td>梁靖敏</td>
+		                    <td>122345646@qq.com</td>
+		                    <td>1537789066565</td>
+		                    <td class="tr_status">有效</td>
+		                    <td>
+		                    	<a href="modify-operator.html">
+		                    		<button type="button" class="btn btn-warning btn-xs" id="modify">  修改</button>
+		                    	</a>
+		                    	<button type="button" class="btn btn-danger btn-xs freeze" data-toggle="modal" data-target="#freezeModal">冻结</button>
+		                    </td>
+		                  </tr>  
+		                  <tr>
+		                    <td>linngo</td>
+		                    <td>梁靖敏</td>
+		                    <td>122345646@qq.com</td>
+		                    <td>1537789066565</td>
+		                    <td class="tr_status">有效</td>
+		                    <td>
+		                    	<a href="modify-operator.html">
+		                    		<button type="button" class="btn btn-warning btn-xs" id="modify">  修改</button>
+		                    	</a>
+		                    	<button type="button" class="btn btn-danger btn-xs freeze" data-toggle="modal" data-target="#freezeModal">冻结</button>
+		                    </td>
+		                  </tr>  
+		                  <tr>
+		                    <td>linngo</td>
+		                    <td>梁靖敏</td>
+		                    <td>122345646@qq.com</td>
+		                    <td>1537789066565</td>
+		                    <td class="tr_status">有效</td>
+		                    <td>
+		                    	<a href="modify-operator.html">
+		                    		<button type="button" class="btn btn-warning btn-xs" id="modify">  修改</button>
+		                    	</a>
+		                    	<button type="button" class="btn btn-danger btn-xs freeze" data-toggle="modal" data-target="#freezeModal">冻结</button>
+		                    </td>
+		                  </tr>      
+		                </tbody>
+		              </table> 
+		              <ul class="pagination pull-right">
+			            <li><a href="#">«</a></li>
+			            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			            <li><a href="#">2 </a></li>
+			            <li><a href="#">3 </a></li>
+			            <li><a href="#">4 </a></li>
+			            <li><a href="#">5 </a></li>
+			            <li><a href="#">»</a></li>              
+		              </ul>          
+			</div><!-- /.b2b_right_content -->
+		</div>  <!--  /.b2b_main -->
+
+		<!-- 冻结操作员是弹出的确认框 -->
+		<div class="modal fade" id="freezeModal" tabindex="-1" role="dialog" aria-labelledby="freezeModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      <div class="alert_content">
+		        确认要冻结该操作员吗?
+		      </div>
+		      <div class="modal_footer">
+		        <button type="button" class="btn btn-success freeze_confirm" data-dismiss="modal">确认</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>   <!--/.freezeModal -->
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/distributor.js"></script>
+	</body>
+</html>
