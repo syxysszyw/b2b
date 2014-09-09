@@ -1,11 +1,11 @@
 ﻿$(function(){
-  loadProvince('440000');
+  fLoadProvince('440000');
 })
 
-function loadProvince(regionId){
+function fLoadProvince(regionId){
   $('#id_provSelect').html("");
   $('#id_provSelect').append("<option value=''>请选择省份</option>");
-  var jsonStr = getAddress(regionId, 0);
+  var jsonStr = fGetAddress(regionId, 0);
   for(var k in jsonStr){
     $('#id_provSelect').append("<option value='"+k+"'>"+jsonStr[k]+"</option>");
   }
@@ -14,15 +14,15 @@ function loadProvince(regionId){
     $('#id_citySelect').append("<option value=''>请选择城市</option>");
   }else{
     $("#id_provSelect").val(regionId.substring(0, 2)+"0000");
-    loadCity(regionId);
+    fLoadCity(regionId);
   }
 }
 
-function loadCity(regionId){
+function fLoadCity(regionId){
   $("#id_citySelect").html("");
   $("#id_citySelect").append("<option value=''>请选择城市</option>");
   if(regionId.length == 6){
-    var jsonStr = getAddress(regionId, 1);
+    var jsonStr = fGetAddress(regionId, 1);
     for(var k in jsonStr){
       $("#id_citySelect").append("<option value='"+k+"'>"+jsonStr[k]+"</option>");
     }

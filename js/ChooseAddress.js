@@ -1,4 +1,4 @@
-function getAddress(regionId,type) {
+function fGetAddress(regionId,type) {
   var array = {};
   if(type==0) {//省级列表
 	var obj = address['0'];

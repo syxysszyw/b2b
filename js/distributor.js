@@ -16,7 +16,7 @@
             }
         });
 
-        function inputValidation(cla){
+        function fInputValidation(cla){
             var valid = true;
             $(cla).each(function(){
                 if($(this).val() == ""){
@@ -34,7 +34,7 @@
 
 
         $("#submitBtn").on("click", function(){
-            var valid = inputValidation("input[required='required']");
+            var valid = fInputValidation("input[required='required']");
             if(valid){
                 $("form").submit();
             }
